@@ -1,15 +1,8 @@
-
-  def get_real_floor(n)
-    if n.negative?
-      n
-    elsif n == 0
-       0
-    elsif n <= 13
-      n - 1
-    else n > 13
-      n - 2
-    end
-  end
+ def get_real_floor(n)
+  return n - 0 if n < 1
+  return n - 1 if n.between?(1,13)
+  return n - 2 if n > 13
+end
 puts get_real_floor(5)
 
 
